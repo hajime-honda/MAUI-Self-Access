@@ -10,6 +10,7 @@
             VerticalOptions="Center">
 
             <Image
+                x:Name="imageNet"
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
@@ -45,6 +46,32 @@
                 Clicked="CurrentDateTime_Clicked"
                 />
 
+            <Label Text="名前" FontSize="18" TextColor="White"/>
+            <Entry x:Name="textName" />
+            <Label Text="住所" FontSize="18" TextColor="White"/>
+            <Entry x:Name="textAddress" />
+            <Button
+                Text="送信"
+                Clicked="OnClickSubmit"
+                HorizontalOptions="Center"
+            />
+            <Label x:Name="labelMessage"
+                   FontSize="18" />
+
+            <Button
+                Text="ボット君を回転させてみる"
+                Clicked="OnClickRotation"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="別ページに移動してみる"
+                Clicked="OnNextClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="ポップアップの表示"
+                Clicked="OnClickPopup"
+                HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
 
