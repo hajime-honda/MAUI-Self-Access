@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI学習.FormPage"
+             Title="FormPage">
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+        <Label Text="名前" FontSize="18" TextColor="White"/>
+        <Entry x:Name="textName" />
+        <Label Text="住所" FontSize="18" TextColor="White"/>
+        <Entry x:Name="textAddress" />
+        <Button
+                Text="送信"
+                Clicked="OnClickSubmit"
+                HorizontalOptions="Center"
+            />
+        <Label x:Name="labelMessage"
+                   FontSize="18" />
+
+        <Button
+                Text="戻る"
+                Clicked="OnClickBack"
+                HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
