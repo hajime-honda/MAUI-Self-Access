@@ -88,5 +88,15 @@ public partial class MainPage : ContentPage
 	{
 		lblDatePicker.Text = datePicker.Date.ToString();
 	}
+
+	private async void OnClickFirstMVVM(object sender, EventArgs e)
+	{
+        await Navigation.PushAsync(new MVVM1());
+    }
+
+	private async void OnClickMVVMForm(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new MVVMFormPage());
+	}
 }
 

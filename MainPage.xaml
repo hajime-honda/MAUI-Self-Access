@@ -17,6 +17,8 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -147,6 +149,26 @@
                 x:Name="datePicker"
                 DateSelected="OnChange_DatePicker"
             />
+
+            <Label
+                Grid.Row="12"
+                Grid.Column="0"
+                Text="はじめてのMVVMパターン" />
+            <Button
+                Grid.Row="12" Grid.Column="1"
+                Text="移動"
+                Clicked="OnClickFirstMVVM"
+                HorizontalOptions="Center" />
+
+            <Label
+                Grid.Row="13"
+                Grid.Column="0"
+                Text="MVVMパターンでフォームっぽいの" />
+            <Button
+                Grid.Row="13" Grid.Column="1"
+                Text="移動"
+                Clicked="OnClickMVVMForm"
+                HorizontalOptions="Center" />
         </Grid>
 
     </ScrollView>

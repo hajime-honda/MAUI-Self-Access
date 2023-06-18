@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI学習.MVVM1"
+             Title="MVVM1">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding Greeting}"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="クリックして"
+            Command="{Binding OnGreetingClicked}"
+            HorizontalOptions="Center"
+        />
+
+        <Button
+            Text="戻る"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+        />
+    </VerticalStackLayout>
+</ContentPage>
+    
+    
+    
+<!--BindingContextをxamlで設定する場合-->
+<!--<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI学習.MVVM1"
+             xmlns:local="clr-namespace:MAUI学習;assembly=MAUI学習"
+             Title="MVVM1">
+    <ContentPage.BindingContext>
+        <local:MyViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding Greeting}"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            Text="クリックして"
+            Command="{Binding OnGreetingClicked}"
+            HorizontalOptions="Center"
+        />
+    </VerticalStackLayout>
+</ContentPage>-->

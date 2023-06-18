@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI学習.MVVMFormPage"
+             xmlns:local="clr-namespace:MAUI学習;assembly=MAUI学習"
+             Title="MVVMFormPage">
+    <ContentPage.BindingContext>
+        <local:MVVMFormViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <Label 
+            Text="名前"
+            FontSize="18"
+        />
+        <Entry Text="{Binding Name}" />
+        <Label 
+            Text="住所"
+            FontSize="18"
+        />
+        <Entry Text="{Binding Address}" />
+        <Label 
+            Text="{Binding Message}"
+            FontSize="18"
+            TextColor="ForestGreen"
+        />
+        <Button 
+            Text="クリア"
+            Command="{Binding OnClearClicked}"
+            HorizontalOptions="Center"
+        />
+        <Button 
+            Text="送信"
+            Command="{Binding OnSendClicked}"
+            HorizontalOptions="Center"
+        />
+        <Button 
+            Text="戻る"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+        />
+    </VerticalStackLayout>
+</ContentPage>
