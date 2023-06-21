@@ -19,6 +19,8 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -168,6 +170,26 @@
                 Grid.Row="13" Grid.Column="1"
                 Text="移動"
                 Clicked="OnClickMVVMForm"
+                HorizontalOptions="Center" />
+
+            <Label
+                Grid.Row="14"
+                Grid.Column="0"
+                Text="ListコントロールのMVVM" />
+            <Button
+                Grid.Row="14" Grid.Column="1"
+                Text="移動"
+                Clicked="OnClickListMVVM"
+                HorizontalOptions="Center" />
+
+            <Label
+                Grid.Row="15"
+                Grid.Column="0"
+                Text="コードでUI構築" />
+            <Button
+                Grid.Row="15" Grid.Column="1"
+                Text="移動"
+                Clicked="OnClickCodeOnly"
                 HorizontalOptions="Center" />
         </Grid>
 

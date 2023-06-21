@@ -98,5 +98,15 @@ public partial class MainPage : ContentPage
 	{
 		await Navigation.PushAsync(new MVVMFormPage());
 	}
+
+	private async void OnClickListMVVM(object sender, EventArgs e)
+	{
+		await Navigation.PushAsync(new ListBindingPage());
+	}
+
+    private async void OnClickCodeOnly(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new CodeOnlyPage());
+    }
 }
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI学習.ListBindingPage"
+             xmlns:local="clr-namespace:MAUI学習;assembly=MAUI学習"
+             Title="ListBindingPage">
+    <ContentPage.BindingContext>
+        <local:ListItemViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout>
+        <CollectionView ItemsSource="{Binding Items}"
+                        SelectedItem="{Binding SelectedItem}"
+                        SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0"
+                               Text="{Binding Name}"
+                               FontSize="18"
+                               FontAttributes="Bold" />
+                        <Label Grid.Column="1"
+                               Text="{Binding Location}"
+                               FontSize="18"
+                               FontAttributes="Bold" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Label FontSize="18"
+               HorizontalOptions="Center"
+               Text="{Binding SelectedName}" />
+        <Button
+            Text="戻る"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Center"
+        />
+    </VerticalStackLayout>
+</ContentPage>
